@@ -1,5 +1,7 @@
 # Day 2: The Threat Landscape (Malware, Phishing & Social Engineering)
 
+<img width="1534" height="777" alt="Screenshot 2026-11-02 152754" src="https://github.com/user-attachments/assets/bad22617-e871-44cf-8afc-85d44b18e8f6" />
+
 ## 🦠 Malware Types
 *   **Virus:** Attaches to files, requires user interaction to open or click.
 *   **Worm:** Spreads autonomously across networks (fastest and most dangerous).
