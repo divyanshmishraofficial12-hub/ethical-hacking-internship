@@ -2,6 +2,8 @@
 
 ## 🎯 Overview
 Cyber security is the practice of protecting computers, networks, data, and people from attacks, damage, and unauthorized access. It spans technology, processes, and human behavior to establish and maintain trust.
+<img width="1534" height="783" alt="Screenshot 2026-11-02 152722" src="https://github.com/user-attachments/assets/1e606be9-a567-4c1e-89e5-219ab45b2f3c" />
+
 
 ## 🔺 The CIA Triad
 Every security decision protects at least one core principle:
