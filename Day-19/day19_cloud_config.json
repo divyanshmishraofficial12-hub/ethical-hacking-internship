@@ -1,0 +1,61 @@
+{
+  "_comment": "BrightLeaf Organics - sample cloud configuration for security audit. Find the misconfigurations.",
+  "storage_buckets": [
+    {
+      "name": "brightleaf-customer-data",
+      "public_access": true,
+      "encryption": "none",
+      "contents": "customer records, invoices"
+    },
+    {
+      "name": "brightleaf-app-logs",
+      "public_access": false,
+      "encryption": "AES-256",
+      "contents": "application logs"
+    },
+    {
+      "name": "brightleaf-public-website",
+      "public_access": true,
+      "encryption": "AES-256",
+      "contents": "public marketing website files"
+    }
+  ],
+  "iam_policies": [
+    {
+      "name": "intern-role",
+      "effect": "Allow",
+      "action": "*",
+      "resource": "*",
+      "mfa_required": false,
+      "_note": "assigned to all interns"
+    },
+    {
+      "name": "backup-service",
+      "effect": "Allow",
+      "action": ["storage:Read", "storage:Write"],
+      "resource": "brightleaf-app-logs",
+      "mfa_required": false
+    },
+    {
+      "name": "admin-user-arjun",
+      "effect": "Allow",
+      "action": "*",
+      "resource": "*",
+      "mfa_required": false,
+      "_note": "root/admin account, used for daily work"
+    }
+  ],
+  "access_keys": [
+    {
+      "owner": "admin-user-arjun",
+      "key_id": "AKIA_EXAMPLE_LIVEKEY_1234",
+      "status": "active",
+      "last_rotated": "never",
+      "_note": "also found committed in the public GitHub repo"
+    }
+  ],
+  "network": {
+    "database_port_3306_open_to": "0.0.0.0/0",
+    "ssh_port_22_open_to": "0.0.0.0/0"
+  }
+}
